@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<script type="text/javascript" src="js/jquery_min.js"></script>
+		<script type="text/javascript" src="js/jquery.placeholder.js"></script>
+		<script>
+			$(function(){
+				function hasPlaceholderSupport(){
+					var i = document.createElement('input');
+					return 'placeholder' in i;
+				}
+				if(!hasPlaceholderSupport()){
+					$('#name-container').placeholder();
+					$('#password-container').placeholder();
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<form id="form">
+			<div id="name-container">
+				<input id="name" type="text" placeholder="name"/>
+			</div>
+			<div id="password-container">
+				<input id="password" type="password" placeholder="password"/> 
+			</div>
+		</form>
+	</body>
+</html>
